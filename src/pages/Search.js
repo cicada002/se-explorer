@@ -39,10 +39,10 @@ function Search () {
         },[])
         return (
             <div className='h-content space-y-6 flex flex-col'>
-                <div className='p-4'>
-                    <div className='bg-[#212529] text-white p-6 overflow-x-auto'>
-                        <div className='text-xl'>Transaction Overview</div>
-                        <div className='flex justify-between py-6'>
+                <div className='text-3xl text-center p-4 text-[#FF9417]'>Transaction Overview</div>
+                <div>
+                    <div className='bg-[#303030] text-white overflow-x-auto'>
+                        <div className='flex justify-between p-6 border border-[#636363]'>
                             <div>
                                 <div className='font-semibold'>Transaction Hash</div>
                                 <div>{txnData["txn_hash"]}</div>
@@ -52,7 +52,7 @@ function Search () {
                                 <button onClick={() => {navigate('/search/' + txnData['block_height'])}} className='text-white underline'>#{txnData["block_height"]}</button>
                             </div>
                         </div>
-                        <div className='flex justify-between py-6'>
+                        <div className='flex justify-between p-6 border border-[#636363]'>
                             <div>
                                 <div className='font-semibold'>Block Hash</div>
                                 <div>{txnData["block_hash"]}</div>
@@ -102,7 +102,7 @@ function Search () {
             <div className='h-content space-y-6 flex flex-col'>
                 <div className='p-4'>
                     <div className='text-3xl text-center p-4 text-[#FF9417]'>Block Overview</div>
-                    <div className='bg-[#212529] text-white overflow-x-auto border border-[#636363] bg-[#303030]'>
+                    <div className='text-white overflow-x-auto border border-[#636363] bg-[#303030]'>
                         <div className='flex justify-between space-x-4 border border-[#636363] p-6'>
                             <div>
                                 <div className='font-semibold'>Block Height</div>
